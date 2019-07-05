@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
+
+<c74object name="th.getKey">
+
+	<digest>
+		Get easy access to key strokes.
+	</digest>
+
+	<description>
+		A small utility that saves the hassle and time of searching for the right ascii value and building the correct logic to get keydown, keyup presses from the keyboard. Optional second argument for ascii flag (default = 0). If set to 1 the first argument is the ascii code of symbol.
+	</description>
+
+	<!--METADATA-->
+	<metadatalist>
+		<metadata name="author">Timo Hoogland</metadata>
+		<metadata name="tag">thModules</metadata>
+		<metadata name="tag">max</metadata>
+		<metadata name="tag">ascii</metadata>
+		<metadata name="tag">key</metadata>
+		<metadata name="tag">keyup</metadata>
+		<metadata name="tag">keydown</metadata>
+	</metadatalist>
+
+	<!--INLETS-->
+<!--
+	<inletlist>
+		<inlet id="0" type="signal">
+			<digest>the audio signal to be analyzed</digest>
+		</inlet>
+	</inletlist>
+-->
+	<!--OUTLETS-->
+	<outletlist>
+		<outlet id="0" type="int">
+			<digest>a 0 or 1 for keyup or keypress</digest>
+		</outlet>
+		<outlet id="1" type="bang">
+			<digest>output a bang for keyup</digest>
+		</outlet>
+		<outlet id="2" type="bang">
+			<digest>output a bang for keydown</digest>
+		</outlet>
+	</outletlist>
+
+	<!--ARGUMENTS-->
+	<objarglist>
+		<objarg name="key" optional="1" type="int/symbol">
+			<digest>the key symbol or ascii code</digest>
+			<description>
+				Fill in the key symbol or ascii code for the key that needs to be tracked. (default = spacebar " ")
+			</description>
+		</objarg>
+		<objarg name="asciiFlag" optional="1" type="bool">
+			<digest>set the ascii code flag</digest>
+			<description>
+				When set to 1, the first argument is the ascii code number, instead of the symbol. (default = 0)
+			</description>
+		</objarg>
+	</objarglist>
+
+	<!--MESSAGES-->
+	<methodlist>
+	<!--
+		<method name="signal">
+			<arglist>
+				<arg name="signal" optional="0" type="signal" />
+			</arglist>
+			<digest>
+				The signal to evaluate
+			</digest>
+			<description>
+				The signal to evaluate
+			</description>
+		</method>
+		<method name="bang">
+			<arglist>
+				<arg name="bang" optional="0" type="bang" />
+			</arglist>
+			<digest>
+				Report the list of bands from the signal
+			</digest>
+			<description>
+				Report the list of bands from the signal
+			</description>
+		</method>
+	-->
+	</methodlist>
+
+	<!--ATTRIBUTES-->
+	<attributelist>
+		<!--
+		<attribute name='freq' get='0' set='1' type='float' size='2' >
+			<digest>the crossover frequencies</digest>
+			<description>
+				Set the two frequency-points in Hz for the crossover filters. (default = 150 900)
+			</description>
+		</attribute>
+	-->
+	</attributelist>
+
+	<!--SEEALSO-->
+	<seealsolist>
+		<seealso name="key"/>
+		<seealso name="keyup"/>
+		<seealso name="atoi"/>
+		<seealso name="itoa"/>
+		<seealso name="toggle"/>
+		<seealso name="bang"/>
+	</seealsolist>
+
+</c74object>
