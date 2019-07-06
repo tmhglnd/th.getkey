@@ -1,6 +1,6 @@
 # th.getkey
 
-**Download and donate on gumroad: https://gumroad.com/tmhglnd**
+**Please consider to download and donate via http://gumroad.com/tmhglnd**
 
 return a bang or bool on keydown or keyup strokes of a specified character
 
